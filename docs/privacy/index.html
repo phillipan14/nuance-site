@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nuance — Privacy Policy</title>
+<style>
+  :root { --bg:#edebe6; --ink:#2a1f14; --muted:#5a4a3a; --accent:#c75c4c; --line:#e5dfd5; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", system-ui, sans-serif; background: var(--bg); color: var(--ink); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 56px 24px 80px; }
+  .crumb { font-size: 14px; color: var(--muted); margin-bottom: 32px; }
+  .crumb a { color: var(--muted); text-decoration: none; }
+  h1 { font-family: Georgia, serif; font-weight: 400; font-size: 36px; letter-spacing: -0.01em; margin: 0 0 8px; }
+  .updated { color: var(--muted); font-size: 14px; margin: 0 0 32px; font-style: italic; }
+  h2 { font-family: Georgia, serif; font-size: 22px; font-weight: 400; margin: 40px 0 12px; }
+  h3 { font-size: 16px; font-weight: 600; margin: 24px 0 8px; }
+  p { margin: 0 0 14px; }
+  hr { border: 0; border-top: 1px solid var(--line); margin: 40px 0; }
+  a { color: var(--accent); }
+  .lede { font-size: 17px; color: var(--ink); }
+  .lede strong { background: rgba(199, 92, 76, 0.10); padding: 1px 4px; border-radius: 3px; }
+  footer { margin-top: 56px; padding-top: 24px; border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; }
+  footer a { color: var(--muted); text-decoration: none; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="crumb"><a href="/nuance-site/">← Nuance</a></div>
+
+  <h1>Privacy Policy</h1>
+  <p class="updated">Last updated: 10 May 2026</p>
+
+  <p class="lede">Nuance is a translation keyboard for iOS. The short version: <strong>Quick mode runs entirely on your device. Smart mode sends only the text you choose to translate, to a third-party AI service.</strong></p>
+
+  <hr>
+
+  <h2>Quick mode (default)</h2>
+  <p>Quick mode uses Apple's on-device Translation framework. Text you translate <strong>never leaves your device</strong>. No network calls are made.</p>
+
+  <h2>Smart mode (opt-in)</h2>
+  <p>Smart mode is a separate mode you switch into via the tone chip ("Pick a tone"). When Smart mode is active, the source text you translate is sent over HTTPS to <strong>DeepSeek</strong>, a third-party AI service, for tone-aware translation. The translated reply is returned and shown in the keyboard.</p>
+  <p>What is sent: the source text you typed and the target language + tone you selected.</p>
+  <p>What is NOT sent: any other text from other apps, contacts, location, photos, or device identifiers.</p>
+
+  <hr>
+
+  <h2>What Nuance accesses on your device</h2>
+
+  <h3>Microphone</h3>
+  <p>Used only when you tap the microphone key in the keyboard, for voice-to-text dictation. Audio is processed by Apple's on-device speech recognition (or Apple's servers if your device is older). Permission can be revoked in iOS Settings.</p>
+
+  <h3>Speech recognition</h3>
+  <p>Used by the dictation feature above to transcribe your voice into text in the source language.</p>
+
+  <h3>Photos</h3>
+  <p>Used only if you opt into the screenshot-context feature, which reads your most recent screenshot to provide context for the conversation you're translating. Other photos are never accessed.</p>
+
+  <h3>Local storage</h3>
+  <p>Nuance stores your settings, recent translations (up to the last 30), and your DeepSeek API key (if you provide your own) locally on your device, in iOS UserDefaults / App Group containers. None of this is sent to any Nuance-operated server.</p>
+
+  <hr>
+
+  <h2>Crash and bug reports</h2>
+  <p>If a crash occurs, Nuance sends an anonymous crash report to Sentry containing iOS version, device model, app version, and the line of code that crashed. It does NOT contain translated text or any user content.</p>
+
+  <h2>Analytics</h2>
+  <p>Nuance records anonymous usage events via PostHog (e.g., "user opened Smart mode," "user changed tone"). These events use an anonymous device UUID and are not tied to any account or PII.</p>
+
+  <hr>
+
+  <h2>No account, no sign-in</h2>
+  <p>Nuance does not require an account, sign-in, or email. There is no Sign in with Apple flow, no Google / Facebook / OAuth integration, no third-party authentication.</p>
+
+  <h2>Children's privacy</h2>
+  <p>Nuance is not directed at children under 13. We do not knowingly collect data from children.</p>
+
+  <h2>Contact</h2>
+  <p>Questions about your data: <a href="mailto:phillipan14@gmail.com">phillipan14@gmail.com</a></p>
+
+  <footer><a href="/nuance-site/">← Back to Nuance</a></footer>
+</div>
+</body>
+</html>

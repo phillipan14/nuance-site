@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nuance — Support</title>
+<style>
+  :root { --bg:#edebe6; --ink:#2a1f14; --muted:#5a4a3a; --accent:#c75c4c; --line:#e5dfd5; --card:#f5f3ee; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", system-ui, sans-serif; background: var(--bg); color: var(--ink); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 56px 24px 80px; }
+  .crumb { font-size: 14px; color: var(--muted); margin-bottom: 32px; }
+  .crumb a { color: var(--muted); text-decoration: none; }
+  h1 { font-family: Georgia, serif; font-weight: 400; font-size: 36px; letter-spacing: -0.01em; margin: 0 0 12px; }
+  .lede { color: var(--muted); font-size: 17px; margin: 0 0 32px; }
+  h2 { font-family: Georgia, serif; font-size: 22px; font-weight: 400; margin: 36px 0 12px; }
+  details { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 16px 20px; margin-bottom: 12px; }
+  summary { cursor: pointer; font-weight: 600; list-style: none; position: relative; padding-right: 24px; }
+  summary::-webkit-details-marker { display: none; }
+  summary::after { content: "+"; position: absolute; right: 0; top: 0; color: var(--muted); font-weight: 400; font-size: 18px; }
+  details[open] summary::after { content: "−"; }
+  details p { margin: 12px 0 0; color: var(--ink); }
+  details p:last-child { margin-bottom: 0; }
+  a { color: var(--accent); }
+  .contact { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 24px; margin-top: 32px; }
+  .contact h3 { margin: 0 0 8px; }
+  .contact p { margin: 0; color: var(--muted); }
+  footer { margin-top: 56px; padding-top: 24px; border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; }
+  footer a { color: var(--muted); text-decoration: none; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="crumb"><a href="/nuance-site/">← Nuance</a></div>
+
+  <h1>Support</h1>
+  <p class="lede">Common questions about using Nuance.</p>
+
+  <h2>Getting started</h2>
+
+  <details>
+    <summary>How do I add Nuance as a keyboard?</summary>
+    <p>iPhone <strong>Settings → General → Keyboard → Keyboards → Add New Keyboard</strong> → tap <strong>Nuance</strong>.</p>
+    <p>Then tap on Nuance in the list and toggle <strong>Allow Full Access</strong> if you want Smart Mode (network-using AI translation). Quick Mode works without Full Access.</p>
+  </details>
+
+  <details>
+    <summary>How do I switch to the Nuance keyboard?</summary>
+    <p>In any text field, tap the <strong>globe key</strong> (🌐) at the bottom-left of your keyboard. It cycles through your enabled keyboards. You can also long-press the globe key to pick Nuance directly from the list.</p>
+  </details>
+
+  <details>
+    <summary>What's the difference between Quick and Smart mode?</summary>
+    <p><strong>Quick Mode</strong> uses Apple's on-device Translation framework. Fast, works offline, runs entirely on your device. Best for short messages, signs, menus.</p>
+    <p><strong>Smart Mode</strong> uses an AI service (DeepSeek) for tone-aware translation. Pick a tone — Friendly, Professional, Direct — and Nuance rewrites the way a native speaker would. Requires Full Access + internet.</p>
+  </details>
+
+  <h2>Privacy</h2>
+
+  <details>
+    <summary>Does Nuance log my keystrokes?</summary>
+    <p>No. Nuance only sees what's in the compose area (the text you've typed for translation). Once you tap Translate, that text is processed (on-device for Quick Mode, sent to DeepSeek for Smart Mode). Nothing is logged or sent elsewhere.</p>
+  </details>
+
+  <details>
+    <summary>What data goes to DeepSeek in Smart Mode?</summary>
+    <p>Only the text you've explicitly typed for translation, plus the target language and tone you selected. No contacts, no other text, no photos, no location, no device identifiers.</p>
+    <p>See the full <a href="/nuance-site/privacy/">privacy policy</a>.</p>
+  </details>
+
+  <details>
+    <summary>Can I use Nuance entirely offline?</summary>
+    <p>Yes — Quick Mode works fully offline. Long-press the tone chip to switch to Quick Mode (vermillion thumb). Only Smart Mode requires internet.</p>
+  </details>
+
+  <h2>Troubleshooting</h2>
+
+  <details>
+    <summary>The keyboard isn't appearing in Settings → Keyboards</summary>
+    <p>Make sure you've launched the Nuance app at least once (iOS only registers keyboard extensions after the host app has run). Then go to Settings → General → Keyboard → Keyboards → Add New Keyboard and look for Nuance.</p>
+  </details>
+
+  <details>
+    <summary>Smart Mode isn't translating</summary>
+    <p>Check that you've enabled <strong>Allow Full Access</strong> for the Nuance keyboard (Settings → General → Keyboard → Keyboards → Nuance → Allow Full Access). Without Full Access, the keyboard cannot make network requests, which Smart Mode requires.</p>
+  </details>
+
+  <details>
+    <summary>Can I use my own DeepSeek API key?</summary>
+    <p>The default Smart Mode uses a built-in API key. If you have your own DeepSeek API key, you can paste it in the Nuance app's settings to use your own quota instead.</p>
+  </details>
+
+  <div class="contact">
+    <h3>Still need help?</h3>
+    <p>Email <a href="mailto:phillipan14@gmail.com">phillipan14@gmail.com</a> — usually a reply within a day or two.</p>
+  </div>
+
+  <footer><a href="/nuance-site/">← Back to Nuance</a> &nbsp;·&nbsp; <a href="/nuance-site/privacy/">Privacy</a></footer>
+</div>
+</body>
+</html>
