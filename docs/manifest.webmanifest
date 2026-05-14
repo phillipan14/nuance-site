@@ -1,0 +1,13 @@
+{
+  "name": "Nuance — Translate the way you'd actually say it.",
+  "short_name": "Nuance",
+  "description": "A keyboard that translates with tone, across 30+ languages, right inside any app.",
+  "start_url": "/nuance-site/",
+  "display": "browser",
+  "theme_color": "#edebe6",
+  "background_color": "#edebe6",
+  "icons": [
+    { "src": "favicon.svg", "type": "image/svg+xml", "sizes": "any", "purpose": "any" },
+    { "src": "og-image.png", "sizes": "1200x630", "type": "image/png" }
+  ]
+}
