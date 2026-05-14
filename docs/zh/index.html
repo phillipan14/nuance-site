@@ -1,60 +1,54 @@
 <!doctype html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Nuance — Stop copy-pasting from Google Translate.</title>
-<meta name="description" content="The iOS keyboard that translates with tone — friendly, professional, formal — right inside the app you're already texting in. 30+ languages. Free.">
-<link rel="canonical" href="https://phillipan14.github.io/nuance-site/">
+<title>Nuance — 用对方真正会说的方式去说。</title>
+<meta name="description" content="带语气的 iOS 翻译键盘——朋友、教授、商务三种语气，三十多种语言，直接在你正在用的 App 里完成翻译。免费。">
+<link rel="canonical" href="https://phillipan14.github.io/nuance-site/zh/">
+<link rel="alternate" hreflang="zh-CN" href="https://phillipan14.github.io/nuance-site/zh/">
+<link rel="alternate" hreflang="en" href="https://phillipan14.github.io/nuance-site/">
+<link rel="alternate" hreflang="x-default" href="https://phillipan14.github.io/nuance-site/">
 
-<!-- Social cards. Without these the link unfurls as plain text in WhatsApp,
-     LinkedIn, iMessage — huge drop in click-through. -->
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://phillipan14.github.io/nuance-site/">
-<meta property="og:title" content="Nuance — Stop copy-pasting from Google Translate.">
-<meta property="og:description" content="A keyboard that translates with tone — across 30+ languages, right inside any app. Free on iPhone.">
-<meta property="og:image" content="https://phillipan14.github.io/nuance-site/og-image.png">
+<meta property="og:url" content="https://phillipan14.github.io/nuance-site/zh/">
+<meta property="og:title" content="Nuance — 用对方真正会说的方式去说。">
+<meta property="og:description" content="带语气的 iOS 翻译键盘——朋友、教授、商务三种语气，三十多种语言。免费。">
+<meta property="og:image" content="https://phillipan14.github.io/nuance-site/og-image-zh.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:site_name" content="Nuance">
-<meta property="og:locale" content="en_US">
-<meta property="og:locale:alternate" content="zh_CN">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:locale:alternate" content="en_US">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Nuance — Stop copy-pasting from Google Translate.">
-<meta name="twitter:description" content="A keyboard that translates with tone — across 30+ languages, right inside any app. Free on iPhone.">
-<meta name="twitter:image" content="https://phillipan14.github.io/nuance-site/og-image.png">
+<meta name="twitter:title" content="Nuance — 用对方真正会说的方式去说。">
+<meta name="twitter:description" content="带语气的 iOS 翻译键盘——朋友、教授、商务，三十多种语言。免费。">
+<meta name="twitter:image" content="https://phillipan14.github.io/nuance-site/og-image-zh.png">
 
-<!-- Speed up the eventual App Store handoff. -->
 <link rel="preconnect" href="https://apps.apple.com" crossorigin>
 <link rel="dns-prefetch" href="https://apps.apple.com">
 
-<link rel="icon" type="image/svg+xml" href="favicon.svg">
-<link rel="apple-touch-icon" href="og-image.png">
-<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" type="image/svg+xml" href="../favicon.svg">
+<link rel="apple-touch-icon" href="../og-image.png">
+<link rel="manifest" href="../manifest.webmanifest">
 <meta name="theme-color" content="#edebe6" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#1b1611" media="(prefers-color-scheme: dark)">
 
-<!-- Structured data: lets Google show app card / rich result. -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   "name": "Nuance Translate",
+  "alternateName": "Nuance 翻译",
   "operatingSystem": "iOS 18+",
   "applicationCategory": "UtilitiesApplication",
-  "description": "An iOS keyboard that translates with tone — friendly, professional, formal — across 30+ languages, right inside the app you're already texting in.",
-  "url": "https://phillipan14.github.io/nuance-site/",
-  "image": "https://phillipan14.github.io/nuance-site/og-image.png",
-  "offers": {
-    "@type": "Offer",
-    "price": "0",
-    "priceCurrency": "USD"
-  },
+  "description": "带语气的 iOS 翻译键盘——朋友、教授、商务三种语气，三十多种语言，直接在你正在用的 App 里完成翻译。",
+  "url": "https://phillipan14.github.io/nuance-site/zh/",
+  "image": "https://phillipan14.github.io/nuance-site/og-image-zh.png",
+  "inLanguage": "zh-CN",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
   "downloadUrl": "https://apps.apple.com/app/nuance-translate/id6766677268",
-  "author": {
-    "@type": "Person",
-    "name": "Phillip An"
-  }
+  "author": { "@type": "Person", "name": "Phillip An" }
 }
 </script>
 
@@ -70,22 +64,20 @@
     --accent-soft: rgba(199, 92, 76, 0.08);
     --accent-softer: rgba(199, 92, 76, 0.04);
     --line: #e5dfd5;
-    --line-soft: rgba(229, 223, 213, 0.5);
     --card: #f5f3ee;
     --card-elev: #fbf9f4;
     --good: #2d6a4f;
     --bad: #a06054;
 
-    /* Fluid typography: smooth scale from 320px → 1440px viewports. */
-    --fs-display: clamp(1.875rem, 0.5rem + 6vw, 3.625rem); /* hero h1 */
-    --fs-h2: clamp(1.5rem, 1rem + 2vw, 2rem);              /* section */
+    --fs-display: clamp(1.875rem, 0.5rem + 6vw, 3.625rem);
+    --fs-h2: clamp(1.5rem, 1rem + 2vw, 2rem);
     --fs-lede: clamp(1rem, 0.75rem + 1vw, 1.2rem);
     --fs-body: 1rem;
     --fs-small: 0.875rem;
     --fs-eyebrow: 0.6875rem;
 
-    --space-section: clamp(3.5rem, 6vw + 1rem, 6rem);     /* between sections */
-    --space-block: clamp(1.5rem, 3vw, 2.5rem);            /* within a section */
+    --space-section: clamp(3.5rem, 6vw + 1rem, 6rem);
+    --space-block: clamp(1.5rem, 3vw, 2.5rem);
     --radius-card: 14px;
     --radius-pill: 999px;
 
@@ -109,17 +101,14 @@
       --accent-soft: rgba(224, 130, 110, 0.10);
       --accent-softer: rgba(224, 130, 110, 0.04);
       --line: #2c241d;
-      --line-soft: rgba(44, 36, 29, 0.6);
       --card: #221c15;
       --card-elev: #28211a;
       --good: #6bbf91;
       --bad: #e0826e;
-      --shadow-card: 0 4px 14px -8px rgba(0, 0, 0, 0.4),
-                     0 1px 2px -1px rgba(0, 0, 0, 0.3);
+      --shadow-card: 0 4px 14px -8px rgba(0, 0, 0, 0.4), 0 1px 2px -1px rgba(0, 0, 0, 0.3);
       --shadow-cta: 0 8px 22px -10px rgba(0, 0, 0, 0.6);
       --shadow-cta-hover: 0 12px 28px -10px rgba(0, 0, 0, 0.7);
-      --shadow-video: 0 30px 80px -30px rgba(224, 130, 110, 0.25),
-                      0 12px 28px -10px rgba(0, 0, 0, 0.5);
+      --shadow-video: 0 30px 80px -30px rgba(224, 130, 110, 0.25), 0 12px 28px -10px rgba(0, 0, 0, 0.5);
     }
   }
 
@@ -127,19 +116,23 @@
   html, body { margin: 0; padding: 0; }
   html { scroll-behavior: smooth; }
   body {
-    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", system-ui, sans-serif;
+    /* Chinese-first font stack: PingFang SC is the default macOS / iOS CJK
+       sans, Heiti SC the fallback, then system. Latin glyphs fall through to
+       the standard SF/Helvetica chain. */
+    font-family: -apple-system, "PingFang SC", "Heiti SC", "STHeiti",
+                 BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue",
+                 system-ui, sans-serif;
     background: var(--bg);
     background-image: radial-gradient(ellipse at 12% 6%, var(--accent-soft), transparent 50%),
                       radial-gradient(ellipse at 92% 110%, var(--accent-softer), transparent 55%);
     background-attachment: fixed;
     color: var(--ink);
-    line-height: 1.55;
+    line-height: 1.65;  /* slightly taller for CJK readability */
     font-size: var(--fs-body);
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
     padding: max(env(safe-area-inset-top), 0px) max(env(safe-area-inset-right), 0px) max(env(safe-area-inset-bottom), 0px) max(env(safe-area-inset-left), 0px);
   }
-
   ::selection { background: var(--accent); color: white; }
   :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
 
@@ -148,7 +141,6 @@
     padding: clamp(2rem, 5vw, 3.5rem) clamp(1rem, 4vw, 1.5rem) clamp(2.5rem, 6vw, 4.5rem);
   }
 
-  /* Top nav — sticky on mobile so the CTA is always reachable */
   nav {
     display: flex; align-items: center; justify-content: space-between;
     margin-bottom: clamp(2rem, 5vw, 3.5rem);
@@ -173,6 +165,13 @@
     box-shadow: 0 6px 16px -8px rgba(199, 92, 76, 0.45);
   }
   .brand .name { font-weight: 600; font-size: 17px; letter-spacing: -0.01em; }
+  .nav-right { display: flex; align-items: center; gap: 10px; }
+  .lang-swap {
+    color: var(--muted); font-size: var(--fs-small); text-decoration: none;
+    padding: 6px 10px; border-radius: var(--radius-pill);
+    transition: color 0.15s ease, background 0.15s ease;
+  }
+  .lang-swap:hover { color: var(--accent); background: var(--accent-soft); }
   .top-cta {
     display: inline-flex; align-items: center; gap: 6px;
     color: var(--accent); font-weight: 600; font-size: var(--fs-small);
@@ -182,24 +181,24 @@
   }
   .top-cta:hover { background: color-mix(in srgb, var(--accent) 18%, transparent); transform: translateY(-1px); }
 
-  /* Hero */
   .hero {
     display: grid; gap: clamp(2.5rem, 5vw, 3.5rem);
     grid-template-columns: 1.15fr 1fr; align-items: center;
   }
   .hero-copy h1 {
-    font-family: Georgia, "Times New Roman", serif;
-    font-weight: 400; font-size: var(--fs-display);
-    line-height: 1.08; letter-spacing: -0.022em;
+    /* Chinese headlines look heavier in regular Georgia; use PingFang Bold
+       instead. Slightly tighter tracking for CJK characters. */
+    font-family: "PingFang SC", "Heiti SC", -apple-system, system-ui, sans-serif;
+    font-weight: 600; font-size: var(--fs-display);
+    line-height: 1.18; letter-spacing: 0;
     margin: 0 0 1rem;
     overflow-wrap: break-word;
-    hyphens: auto;
     text-wrap: balance;
   }
-  .hero-copy h1 em { color: var(--accent); font-style: italic; }
+  .hero-copy h1 .accent { color: var(--accent); }
   .hero-copy .lede {
     font-size: var(--fs-lede); color: var(--muted);
-    margin: 0 0 1.75rem; max-width: 36em;
+    margin: 0 0 1.75rem; max-width: 30em;
   }
   .hero-copy .lede strong { color: var(--ink); font-weight: 600; }
 
@@ -217,7 +216,6 @@
   .cta svg { width: 22px; height: 22px; fill: currentColor; }
   .meta { color: var(--muted); font-size: var(--fs-small); }
 
-  /* Demo + language toggle */
   .demo-wrap { position: relative; }
   .lang-toggle {
     display: inline-flex; gap: 4px;
@@ -238,27 +236,25 @@
     width: 100%; max-width: 360px; display: block; margin: 0 auto;
     border-radius: 22px;
     box-shadow: var(--shadow-video);
-    aspect-ratio: 1290 / 2796;  /* lock layout before video loads */
+    aspect-ratio: 1290 / 2796;
     background: var(--card);
   }
 
-  /* Sections */
   section { margin-top: var(--space-section); }
   .eyebrow {
     font-size: var(--fs-eyebrow); font-weight: 700; letter-spacing: 0.14em;
     text-transform: uppercase; color: var(--accent); margin-bottom: 12px;
   }
   section h2 {
-    font-family: Georgia, serif; font-size: var(--fs-h2); font-weight: 400;
-    letter-spacing: -0.018em; line-height: 1.18;
+    font-family: "PingFang SC", "Heiti SC", -apple-system, system-ui, sans-serif;
+    font-size: var(--fs-h2); font-weight: 600;
+    letter-spacing: 0; line-height: 1.32;
     margin: 0 0 0.75rem; max-width: 24ch;
-    overflow-wrap: break-word;
-    text-wrap: balance;
+    overflow-wrap: break-word; text-wrap: balance;
   }
-  section h2 em { color: var(--accent); font-style: italic; }
-  section .sub { font-size: var(--fs-lede); color: var(--muted); margin: 0 0 2rem; max-width: 52ch; }
+  section h2 .accent { color: var(--accent); }
+  section .sub { font-size: var(--fs-lede); color: var(--muted); margin: 0 0 2rem; max-width: 40em; }
 
-  /* The Loop section — pain point with a callout box */
   .loop {
     background: var(--card); border: 1px solid var(--line);
     border-radius: 18px; padding: clamp(1.5rem, 4vw, 2.25rem);
@@ -277,11 +273,10 @@
   .loop-killed {
     margin-top: 1.25rem; padding-top: 1.25rem;
     border-top: 1px solid var(--line);
-    font-size: var(--fs-lede); color: var(--ink); line-height: 1.5;
+    font-size: var(--fs-lede); color: var(--ink); line-height: 1.65;
   }
-  .loop-killed strong em { color: var(--accent); font-style: italic; }
+  .loop-killed strong .accent { color: var(--accent); }
 
-  /* Before/after compare */
   .compare {
     display: grid; gap: 16px;
     grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
@@ -300,19 +295,16 @@
   }
   .panel.good .label { color: var(--good); }
   .panel.bad .label { color: var(--bad); }
-  .source {
-    font-size: 13px; color: var(--muted); margin-bottom: 8px;
-    font-style: italic;
-  }
+  .source { font-size: 13px; color: var(--muted); margin-bottom: 8px; font-style: italic; }
   .result {
-    font-size: clamp(1.125rem, 0.9rem + 0.7vw, 1.375rem);
-    line-height: 1.35; color: var(--ink);
-    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(1.125rem, 0.9rem + 0.7vw, 1.5rem);
+    line-height: 1.5; color: var(--ink);
+    font-family: "PingFang SC", "Heiti SC", -apple-system, system-ui, sans-serif;
+    font-weight: 500;
   }
   .result .accent { color: var(--accent); }
-  .annotate { font-size: 12px; color: var(--muted); margin-top: 12px; line-height: 1.5; }
+  .annotate { font-size: 12px; color: var(--muted); margin-top: 12px; line-height: 1.6; }
 
-  /* How it works */
   .steps {
     display: grid; gap: 16px;
     grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr));
@@ -330,9 +322,8 @@
     margin-bottom: 14px;
   }
   .step h3 { margin: 0 0 6px; font-size: 15px; font-weight: 600; color: var(--ink); }
-  .step p { margin: 0; color: var(--muted); font-size: var(--fs-small); }
+  .step p { margin: 0; color: var(--muted); font-size: var(--fs-small); line-height: 1.65; }
 
-  /* Mode cards with screenshots */
   .modes {
     display: grid; gap: 20px;
     grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
@@ -351,7 +342,7 @@
     color: var(--accent); background: var(--accent-soft);
     padding: 4px 10px; border-radius: 6px;
   }
-  .mode p { margin: 0; color: var(--muted); font-size: var(--fs-small); line-height: 1.55; }
+  .mode p { margin: 0; color: var(--muted); font-size: var(--fs-small); line-height: 1.65; }
   .mode .shot {
     margin-top: auto;
     border-radius: 12px;
@@ -364,11 +355,10 @@
   }
   .mode .shot img { width: 100%; height: 100%; object-fit: cover; object-position: bottom; display: block; }
 
-  /* Feature list */
   ul.feature-list { padding: 0; margin: 0; list-style: none; display: grid; gap: 12px; }
   ul.feature-list li {
     padding-left: 28px; position: relative;
-    font-size: var(--fs-body); color: var(--ink); line-height: 1.55;
+    font-size: var(--fs-body); color: var(--ink); line-height: 1.65;
   }
   ul.feature-list li::before {
     content: ""; position: absolute; left: 0; top: 0.7em;
@@ -376,7 +366,6 @@
   }
   ul.feature-list strong { color: var(--ink); }
 
-  /* Founder */
   .founder {
     background: var(--card); border: 1px solid var(--line);
     border-radius: 18px; padding: clamp(1.5rem, 3vw, 1.75rem);
@@ -390,12 +379,10 @@
     color: white; font-family: Georgia, serif; font-style: italic;
     font-weight: 600; font-size: 22px;
   }
-  .founder p { margin: 0 0 10px; font-size: 15px; color: var(--ink); line-height: 1.6; }
-  .founder a { color: var(--accent); text-decoration: none; }
-  .founder a:hover { text-decoration: underline; }
+  .founder p { margin: 0 0 10px; font-size: 15px; color: var(--ink); line-height: 1.7; }
+  .founder em { color: var(--accent); font-style: normal; font-weight: 600; }
   .founder .sig { color: var(--muted); font-size: 13px; }
 
-  /* FAQ */
   details.faq {
     border-bottom: 1px solid var(--line); padding: 16px 0;
   }
@@ -413,11 +400,10 @@
     flex-shrink: 0;
   }
   details.faq[open] summary::after { transform: rotate(45deg); }
-  details.faq p { margin: 12px 0 0; color: var(--muted); font-size: 15px; line-height: 1.6; }
+  details.faq p { margin: 12px 0 0; color: var(--muted); font-size: 15px; line-height: 1.7; }
   details.faq a { color: var(--accent); text-decoration: none; }
-  details.faq a:hover { text-decoration: underline; }
+  details.faq em { color: var(--accent); font-style: normal; font-weight: 600; }
 
-  /* Final CTA */
   .final-cta {
     margin-top: var(--space-section);
     background: linear-gradient(135deg, var(--accent-soft), var(--accent-softer));
@@ -426,15 +412,15 @@
     text-align: center;
   }
   .final-cta h2 {
-    font-family: Georgia, serif; font-size: clamp(1.5rem, 1rem + 2vw, 2rem);
-    font-weight: 400; letter-spacing: -0.018em;
+    font-family: "PingFang SC", "Heiti SC", -apple-system, system-ui, sans-serif;
+    font-size: clamp(1.5rem, 1rem + 2vw, 2rem);
+    font-weight: 600; line-height: 1.32;
     margin: 0 0 12px; max-width: none;
   }
-  .final-cta h2 em { color: var(--accent); font-style: italic; }
+  .final-cta h2 .accent { color: var(--accent); }
   .final-cta p { color: var(--muted); margin: 0 0 1.5rem; }
   .final-cta .cta { margin: 0 auto; }
 
-  /* Footer */
   footer {
     margin-top: clamp(2.5rem, 5vw, 4rem);
     padding-top: 2rem;
@@ -446,40 +432,30 @@
   footer a:hover { color: var(--accent); }
   footer .copyright { margin-left: auto; }
 
-  /* Tablet breakpoint — 3-col grids ease into 2-col */
   @media (max-width: 880px) {
     .hero { grid-template-columns: 1fr; }
     .demo-wrap { display: flex; flex-direction: column; align-items: center; }
     .lang-toggle { align-self: center; }
   }
-  /* Phone breakpoint — tighten everything */
   @media (max-width: 540px) {
     nav { padding: 10px 0; }
     .brand .logo { width: 36px; height: 36px; font-size: 19px; }
     .brand .name { font-size: 16px; }
     .top-cta { padding: 7px 11px; font-size: 12px; }
+    .lang-swap { font-size: 12px; padding: 5px 8px; }
     .cta { padding: 12px 18px; font-size: 14px; min-height: 46px; }
     .cta svg { width: 20px; height: 20px; }
     section h2 { max-width: none; }
     .mode { padding: 20px; }
     footer .copyright { margin-left: 0; width: 100%; }
   }
-
-  /* Honour reduced motion */
   @media (prefers-reduced-motion: reduce) {
     html { scroll-behavior: auto; }
-    *, *::before, *::after {
-      animation-duration: 0.01ms !important;
-      animation-iteration-count: 1 !important;
-      transition-duration: 0.01ms !important;
-    }
+    *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
   }
-
-  /* Print: clean reading view */
   @media print {
     nav, .lang-toggle, .demo, .cta, .top-cta, .final-cta { display: none; }
     body { background: white; color: black; }
-    section { margin-top: 2rem; page-break-inside: avoid; }
   }
 </style>
 </head>
@@ -487,208 +463,211 @@
 <div class="wrap">
 
   <nav>
-    <a class="brand" href="/nuance-site/">
+    <a class="brand" href="/nuance-site/zh/">
       <div class="logo">ñ</div>
       <div class="name">Nuance</div>
     </a>
-    <a class="top-cta" href="https://apps.apple.com/app/nuance-translate/id6766677268" target="_blank" rel="noopener">
-      Get on App Store →
-    </a>
+    <div class="nav-right">
+      <a class="lang-swap" href="/nuance-site/" hreflang="en">EN</a>
+      <a class="top-cta" href="https://apps.apple.com/app/nuance-translate/id6766677268" target="_blank" rel="noopener">
+        App Store 下载 →
+      </a>
+    </div>
   </nav>
 
   <div class="hero">
     <div class="hero-copy">
-      <h1>Stop copy-pasting from <em>Google Translate.</em></h1>
-      <p class="lede">You know the loop — <strong>type, copy, switch apps, paste, realize it sounds robotic, go back, edit, copy again.</strong> Nuance is an iOS keyboard, so translation happens inside whatever app you're already in. Pick a tone, send.</p>
+      <h1>别再来回切 <span class="accent">Google 翻译</span>了。</h1>
+      <p class="lede">那个让人崩溃的循环——<strong>打开翻译、输入、复制、切回微信、粘贴、发现翻得很机械、再回去改、再复制…</strong>Nuance 是 iOS 键盘，翻译就在你正在用的 App 里完成。选一个语气，直接发送。</p>
       <div class="cta-row">
-        <a class="cta" href="https://apps.apple.com/app/nuance-translate/id6766677268" target="_blank" rel="noopener" aria-label="Download Nuance on the App Store">
+        <a class="cta" href="https://apps.apple.com/app/nuance-translate/id6766677268" target="_blank" rel="noopener" aria-label="App Store 下载 Nuance">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83zM13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
-          Download on the App Store
+          App Store 下载
         </a>
-        <span class="meta">Free · iPhone · iOS 18+</span>
+        <span class="meta">免费 · iPhone · iOS 18+</span>
       </div>
     </div>
     <div class="demo-wrap">
-      <div class="lang-toggle" role="tablist" aria-label="Demo narration language">
-        <button type="button" class="active" data-lang="en" role="tab" aria-selected="true">English</button>
-        <button type="button" data-lang="zh" role="tab" aria-selected="false">中文</button>
+      <div class="lang-toggle" role="tablist" aria-label="演示视频语言">
+        <button type="button" data-lang="en" role="tab" aria-selected="false">English</button>
+        <button type="button" class="active" data-lang="zh" role="tab" aria-selected="true">中文</button>
       </div>
       <div class="demo">
-        <video id="demoVideo" src="demo.mp4" poster="demo-poster.jpg" controls playsinline preload="none" aria-label="Nuance demo video"></video>
+        <video id="demoVideo" src="../demo-zh.mp4" poster="../demo-poster-zh.jpg" controls playsinline preload="none" aria-label="Nuance 演示视频"></video>
       </div>
     </div>
   </div>
 
   <section aria-labelledby="loop-h">
-    <div class="eyebrow">The loop you'll never have to do again</div>
-    <h2 id="loop-h">Texting in another language right now <em>sucks.</em></h2>
-    <p class="sub">Cross-language messaging means juggling two apps. Worse, the result usually sounds like a textbook wrote it — not like a person speaking to a friend, a professor, or a customer.</p>
+    <div class="eyebrow">那个让人崩溃的循环</div>
+    <h2 id="loop-h">现在用外语发消息，<span class="accent">真的太折磨</span>了。</h2>
+    <p class="sub">跨语言聊天意味着同时玩两个 App。更糟的是，翻出来的话往往像课本写的——不像一个人对朋友说话、对教授请教、或者跟客户沟通的那种说法。</p>
     <div class="loop">
-      <div class="loop-steps" aria-label="The current Google Translate loop">
-        <span>open Google Translate</span>
+      <div class="loop-steps" aria-label="现在的 Google 翻译循环">
+        <span>打开 Google 翻译</span>
         <span class="arrow">→</span>
-        <span>type</span>
+        <span>输入</span>
         <span class="arrow">→</span>
-        <span>copy</span>
+        <span>复制</span>
         <span class="arrow">→</span>
-        <span>switch back to WhatsApp</span>
+        <span>切回微信</span>
         <span class="arrow">→</span>
-        <span>paste</span>
+        <span>粘贴</span>
         <span class="arrow">→</span>
-        <span>realize it sounds wrong</span>
+        <span>发现翻得很怪</span>
         <span class="arrow">→</span>
-        <span>repeat</span>
+        <span>再来一遍</span>
       </div>
       <div class="loop-killed">
-        <strong>Nuance kills the loop.</strong> It's a keyboard, not an app. Translation happens <strong><em>inside</em></strong> the app you're already typing in — WhatsApp, iMessage, WeChat, Slack, anything. No flipping. No paste mistakes. No "sent it to the wrong window."
+        <strong>Nuance 终结这个循环。</strong>它是<strong><span class="accent">键盘</span></strong>，不是 App。翻译<strong>就在你正在用的 App 里完成</strong>——微信、WhatsApp、iMessage、邮件、任何输入框。不用来回切，不会粘错窗口。
       </div>
     </div>
   </section>
 
   <section aria-labelledby="diff-h">
-    <div class="eyebrow">The difference</div>
-    <h2 id="diff-h">Same input. <em>Native-speaker</em> output.</h2>
-    <p class="sub">Translation isn't just words — it's tone, register, and context. A literal translator gets the meaning. Nuance gets the message.</p>
+    <div class="eyebrow">差别在哪里</div>
+    <h2 id="diff-h">同一句话。<span class="accent">母语者</span>的输出。</h2>
+    <p class="sub">翻译不只是字——还有语气、称呼、场景。机器直译能翻出意思，Nuance 能翻出语境。</p>
     <div class="compare">
       <div class="panel bad">
-        <div class="label">⚠ Literal translation</div>
-        <div class="source">"Hi, how are you" (to your professor)</div>
+        <div class="label">⚠ 机器直译</div>
+        <div class="source">"Hi, how are you"（发给教授）</div>
         <div class="result">你好吗？</div>
-        <div class="annotate">Uses casual <strong>你</strong>. Sounds like you're texting a classmate, not faculty.</div>
+        <div class="annotate">用了随意的<strong>「你」</strong>。听起来像在跟同学聊天，不像跟老师。</div>
       </div>
       <div class="panel good">
-        <div class="label">✓ Nuance Smart mode</div>
-        <div class="source">"Hi, how are you" (to your professor)</div>
+        <div class="label">✓ Nuance 智能模式</div>
+        <div class="source">"Hi, how are you"（发给教授）</div>
         <div class="result">教授<span class="accent">您</span>好，最近一切顺利吗？</div>
-        <div class="annotate">Honorific <strong>您</strong>, addresses them by title, full polite construction — what a native speaker would actually write.</div>
+        <div class="annotate">用尊敬的<strong>「您」</strong>、带上称呼、加上完整的问候——母语者真正会写的样子。</div>
       </div>
     </div>
   </section>
 
   <section aria-labelledby="how-h">
-    <div class="eyebrow">How it works</div>
-    <h2 id="how-h">Three taps. <em>Inside</em> any app.</h2>
+    <div class="eyebrow">怎么用</div>
+    <h2 id="how-h">三步。<span class="accent">就在</span>你正在用的 App 里。</h2>
     <div class="steps">
       <div class="step">
         <div class="num">1</div>
-        <h3>Type in your language</h3>
-        <p>Open WhatsApp, iMessage, WeChat — anything. Type "Hi how are you" naturally.</p>
+        <h3>用你的母语输入</h3>
+        <p>打开微信、iMessage、邮件——任何输入框。正常地用英文（或中文）打字。</p>
       </div>
       <div class="step">
         <div class="num">2</div>
-        <h3>Switch to Nuance</h3>
-        <p>Long-press the globe key, pick Nuance. The translation strip appears at the top.</p>
+        <h3>切到 Nuance</h3>
+        <p>长按地球键，选「Nuance」。键盘上方会出现翻译条。</p>
       </div>
       <div class="step">
         <div class="num">3</div>
-        <h3>Pick a tone, send</h3>
-        <p>Friend, professor, business. Nuance rewrites it the way a native would. Tap to insert.</p>
+        <h3>选语气，发送</h3>
+        <p>朋友、教授、商务。Nuance 写出母语者会用的说法，一键插入。</p>
       </div>
     </div>
   </section>
 
   <section aria-labelledby="modes-h">
-    <div class="eyebrow">Two modes</div>
-    <h2 id="modes-h">Private by default. <em>Smart</em> when you want it.</h2>
+    <div class="eyebrow">两种模式</div>
+    <h2 id="modes-h">默认隐私。<span class="accent">智能</span>，按需启用。</h2>
     <div class="modes">
       <div class="mode">
         <div class="head">
-          <h3>Quick mode</h3>
-          <span class="tag">On-device · free</span>
+          <h3>快速模式</h3>
+          <span class="tag">本地 · 免费</span>
         </div>
-        <p>Apple's translation framework runs entirely on your phone. No internet, no server, nothing sent anywhere. Works offline once the language pack is downloaded. Best for short messages, signs, menus.</p>
+        <p>使用 Apple 的本地翻译框架——完全离线、零网络、零账号。下载语言包后即可离线使用。适合短消息、菜单、路牌。</p>
         <div class="shot">
-          <img src="mode-quick.jpg" alt="Quick mode screenshot — Nuance shows Chinese translation with pinyin under an English source phrase" loading="lazy" decoding="async">
+          <img src="../mode-quick.jpg" alt="快速模式截图——Nuance 显示英文输入的中文翻译，下面带拼音" loading="lazy" decoding="async">
         </div>
       </div>
       <div class="mode">
         <div class="head">
-          <h3>Smart mode</h3>
-          <span class="tag">Tone-aware AI</span>
+          <h3>智能模式</h3>
+          <span class="tag">AI 语气感知</span>
         </div>
-        <p>Tone-aware AI translation that adjusts for register, audience, and context. First 10 translations free. Bring your own API key after, or share quick feedback inside the app to unlock more.</p>
+        <p>AI 翻译会根据语气、称呼、场景调整。前 10 次免费。之后可以填一份一分钟的应用内反馈表解锁，或在设置里填入你自己的 API key。</p>
         <div class="shot">
-          <img src="mode-smart.jpg" alt="Smart mode screenshot — Nuance keyboard with Smart tab active, Professor tone selected, AI translation in progress" loading="lazy" decoding="async">
+          <img src="../mode-smart.jpg" alt="智能模式截图——Nuance 键盘的智能模式标签已激活，教授语气已选择" loading="lazy" decoding="async">
         </div>
       </div>
     </div>
   </section>
 
   <section aria-labelledby="features-h">
-    <div class="eyebrow">Built for real conversations</div>
-    <h2 id="features-h">The little things that <em>actually</em> matter.</h2>
+    <div class="eyebrow">为真实对话而做</div>
+    <h2 id="features-h">那些<span class="accent">真正有用</span>的小细节。</h2>
     <ul class="feature-list">
-      <li><strong>Reply suggestions</strong> — three ways to respond, in their language and yours</li>
-      <li><strong>Conversation memory</strong> — Nuance remembers names, roles, and the thread you're on</li>
-      <li><strong>Voice-to-text dictation</strong> — speak instead of type, in either direction</li>
-      <li><strong>Pronunciation playback</strong> — long-press any translation to hear it spoken aloud</li>
-      <li><strong>Pinyin / romanization</strong> built in so you can actually say what you sent</li>
-      <li><strong>30+ languages</strong>, no account, no sign-in, no email required</li>
+      <li><strong>回复建议</strong>——根据对话，提供三种回复方案，两种语言并排显示</li>
+      <li><strong>对话记忆</strong>——Nuance 记住对方的名字、身份、之前聊过的内容</li>
+      <li><strong>语音输入</strong>——直接说，自动转成文字，正向反向都行</li>
+      <li><strong>发音播放</strong>——长按任意翻译结果，听母语者怎么读</li>
+      <li><strong>内置拼音 / 罗马音</strong>——发出去的内容，自己也能读出来</li>
+      <li><strong>三十多种语言</strong>，不用注册，不用账号，不用邮箱</li>
     </ul>
   </section>
 
   <section aria-labelledby="founder-h">
-    <h2 id="founder-h" class="visually-hidden" style="position:absolute;left:-9999px;">Behind Nuance</h2>
+    <h2 id="founder-h" style="position:absolute;left:-9999px;">关于 Nuance</h2>
     <div class="founder">
       <div class="ñ" aria-hidden="true">ñ</div>
       <div>
-        <p>I built Nuance at Tsinghua, where I send roughly 40 cross-language messages a day. I got tired of flipping to Google Translate, copying, pasting, and watching my professor read something that sounded like a robot wrote it.</p>
-        <p>Nuance is the keyboard I wanted to exist. If it helps you — or doesn't — I'd love to hear what you'd add. Open the app, tap Settings → <em>Share feedback</em>, and tell me where it sucks.</p>
-        <div class="sig">— Phillip An, Schwarzman Scholar '26, Tsinghua University</div>
+        <p>我在清华读书，每天大约要发四十条跨语言的消息。受够了来回切 Google 翻译、复制、粘贴，看着教授读到一句明显像机器写的话。</p>
+        <p>Nuance 就是我自己想要的那个键盘。如果它帮到你——或者没帮到你——欢迎在 App 里告诉我：设置 → <em>分享反馈</em>。</p>
+        <div class="sig">— 安光宁 (Phillip An)，2026 苏世民学者，清华大学</div>
       </div>
     </div>
   </section>
 
   <section aria-labelledby="faq-h">
-    <div class="eyebrow">Questions</div>
-    <h2 id="faq-h">The honest answers.</h2>
+    <div class="eyebrow">常见问题</div>
+    <h2 id="faq-h">老实说答案。</h2>
     <details class="faq">
-      <summary>Is Nuance really free?</summary>
-      <p>Yes. Quick mode (on-device translation) is free forever. Smart mode (tone-aware AI) is free for the first 10 translations on our bundled key. After that, you can either share a one-minute in-app feedback survey to unlock more, or add your own AI translation provider API key in Settings and pay your own bill directly.</p>
+      <summary>Nuance 真的免费吗？</summary>
+      <p>是的。快速模式（本地翻译）永久免费。智能模式（AI 语气感知）前 10 次免费使用内置 key。之后可以填一份一分钟的应用内反馈表解锁，或者在「设置 → 翻译 key」里填入你自己的 AI 翻译 API key，自己承担费用。</p>
     </details>
     <details class="faq">
-      <summary>What data does Nuance collect?</summary>
-      <p>Nothing personal. Quick mode runs entirely on your phone — no network traffic at all. Smart mode sends only the text you tap Translate on, over HTTPS, to the AI translation service, which discards it after the response. No accounts, no sign-in, no email. See the <a href="/nuance-site/privacy/">full privacy policy</a>.</p>
+      <summary>Nuance 收集什么数据？</summary>
+      <p>不收集个人数据。快速模式完全在你的手机本地运行——零网络流量。智能模式只在你点「翻译」时，把那段文字通过 HTTPS 发送到第三方 AI 翻译服务，对方完成后丢弃。没有账号、没有登录、没有邮箱。详见<a href="/nuance-site/privacy/">隐私政策</a>。</p>
     </details>
     <details class="faq">
-      <summary>Which languages are supported?</summary>
-      <p>30+ language pairs via Apple Translation (Quick mode) — Spanish, French, German, Italian, Portuguese, Japanese, Korean, Chinese (Simplified + Traditional), Arabic, Russian, Dutch, Polish, Turkish, Vietnamese, Thai, Indonesian, and more. Smart mode works with any pair the model knows.</p>
+      <summary>支持哪些语言？</summary>
+      <p>快速模式通过 Apple Translation 支持 30+ 种语言对——西班牙语、法语、德语、意大利语、葡萄牙语、日语、韩语、中文（简繁）、阿拉伯语、俄语、荷兰语、波兰语、土耳其语、越南语、泰语、印尼语等。智能模式支持模型认识的任何语言对。</p>
     </details>
     <details class="faq">
-      <summary>Does it work on Android?</summary>
-      <p>iPhone only for now, iOS 18+. Android isn't planned for the near term — building a native iOS keyboard with this UX took the whole runway. If demand is strong, that changes.</p>
+      <summary>有 Android 版吗？</summary>
+      <p>暂时只有 iPhone（iOS 18+）。短期内不计划做 Android——做这种 UX 的原生 iOS 键盘已经把所有时间都花进去了。如果需求够强烈，会重新评估。</p>
     </details>
     <details class="faq">
-      <summary>What's "Allow Full Access" for, and is it safe?</summary>
-      <p>iOS requires "Allow Full Access" for any keyboard that makes network calls (Smart mode reaches the AI translation service). The toggle is in Settings → General → Keyboard → Keyboards → Nuance. We never log keystrokes — only the text you explicitly tap "Translate" on is sent. Quick mode works without Full Access since it's on-device.</p>
+      <summary>「允许完全访问」是干什么的？安全吗？</summary>
+      <p>iOS 要求任何会发起网络请求的键盘开启「允许完全访问」（智能模式需要联网）。开关在「设置 → 通用 → 键盘 → 键盘 → Nuance」。我们不记录键盘输入——只有你明确点「翻译」的文字才会被发送。快速模式不需要这个权限，因为它在本地运行。</p>
     </details>
     <details class="faq">
-      <summary>Who's behind Nuance?</summary>
-      <p>One person — Phillip An, a Schwarzman Scholar at Tsinghua University in Beijing. Built solo, designed for the people I send messages to every day in three languages. Feature requests and feedback: open Nuance → Settings → <em>Share feedback</em>.</p>
+      <summary>谁在做 Nuance？</summary>
+      <p>一个人——安光宁，苏世民学者，在北京清华大学。一个人做的，专门为每天用三种语言发消息的人设计。功能建议和反馈：打开 Nuance → 设置 → <em>分享反馈</em>。</p>
     </details>
   </section>
 
   <div class="final-cta">
-    <h2>Translate the way you'd <em>actually</em> say it.</h2>
-    <p>Free, no signup, ready in 60 seconds.</p>
+    <h2>用对方<span class="accent">真正</span>会说的方式去说。</h2>
+    <p>免费、不用注册、一分钟搞定。</p>
     <a class="cta" href="https://apps.apple.com/app/nuance-translate/id6766677268" target="_blank" rel="noopener">
       <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83zM13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
-      Download on the App Store
+      App Store 下载
     </a>
   </div>
 
   <footer>
-    <a href="/nuance-site/privacy/">Privacy</a>
-    <a href="/nuance-site/support/">Support</a>
+    <a href="/nuance-site/privacy/">隐私</a>
+    <a href="/nuance-site/support/">支持</a>
     <a href="https://apps.apple.com/app/nuance-translate/id6766677268" target="_blank" rel="noopener">App Store</a>
-    <a href="/nuance-site/zh/" hreflang="zh">中文</a>
+    <a href="/nuance-site/" hreflang="en">English</a>
     <div class="copyright">© 2026 Nuance</div>
   </footer>
 </div>
 
 <script>
-  // Language toggle: swaps the demo video src + poster between EN and ZH.
-  // Preserves play position and playback state across the swap.
+  // Language toggle on the demo video. EN button swaps to demo.mp4 from
+  // the parent path, ZH stays on demo-zh.mp4.
   const video = document.getElementById('demoVideo');
   document.querySelectorAll('.lang-toggle button').forEach(btn => {
     btn.addEventListener('click', () => {
@@ -701,8 +680,8 @@
       const lang = btn.dataset.lang;
       const wasPlaying = !video.paused;
       const t = video.currentTime;
-      video.poster = lang === 'zh' ? 'demo-poster-zh.jpg' : 'demo-poster.jpg';
-      video.src = lang === 'zh' ? 'demo-zh.mp4' : 'demo.mp4';
+      video.poster = lang === 'zh' ? '../demo-poster-zh.jpg' : '../demo-poster.jpg';
+      video.src = lang === 'zh' ? '../demo-zh.mp4' : '../demo.mp4';
       video.addEventListener('loadedmetadata', () => {
         try { video.currentTime = t; } catch (_) {}
         if (wasPlaying) video.play().catch(() => {});

@@ -40,7 +40,7 @@
   <p>Quick mode uses Apple's on-device Translation framework. Text you translate <strong>never leaves your device</strong>. No network calls are made.</p>
 
   <h2>Smart mode (opt-in)</h2>
-  <p>Smart mode is a separate mode you switch into via the tone chip ("Pick a tone"). When Smart mode is active, the source text you translate is sent over HTTPS to <strong>DeepSeek</strong>, a third-party AI service, for tone-aware translation. The translated reply is returned and shown in the keyboard.</p>
+  <p>Smart mode is a separate mode you switch into via the tone chip ("Pick a tone"). When Smart mode is active, the source text you translate is sent over HTTPS to a third-party AI translation service for tone-aware translation. The translated reply is returned and shown in the keyboard. The provider does not retain the request after responding.</p>
   <p>What is sent: the source text you typed and the target language + tone you selected.</p>
   <p>What is NOT sent: any other text from other apps, contacts, location, photos, or device identifiers.</p>
 
@@ -58,7 +58,7 @@
   <p>Used only if you opt into the screenshot-context feature, which reads your most recent screenshot to provide context for the conversation you're translating. Other photos are never accessed.</p>
 
   <h3>Local storage</h3>
-  <p>Nuance stores your settings, recent translations (up to the last 30), and your DeepSeek API key (if you provide your own) locally on your device, in iOS UserDefaults / App Group containers. None of this is sent to any Nuance-operated server.</p>
+  <p>Nuance stores your settings, recent translations (up to the last 30), and your AI translation provider API key (if you supply your own) locally on your device, in iOS UserDefaults / App Group containers. None of this is sent to any Nuance-operated server.</p>
 
   <hr>
 
@@ -77,7 +77,7 @@
   <p>Nuance is not directed at children under 13. We do not knowingly collect data from children.</p>
 
   <h2>Contact</h2>
-  <p>Questions about your data: <a href="mailto:phillipan14@gmail.com">phillipan14@gmail.com</a></p>
+  <p>Questions about your data: open Nuance, tap the gear icon → <strong>Feedback → Share feedback</strong>. The form lands directly in our inbox.</p>
 
   <footer><a href="/nuance-site/">← Back to Nuance</a></footer>
 </div>
