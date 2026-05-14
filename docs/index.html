@@ -77,8 +77,8 @@
     --bad: #a06054;
 
     /* Fluid typography: smooth scale from 320px → 1440px viewports. */
-    --fs-display: clamp(2.25rem, 1rem + 5vw, 3.75rem);   /* hero h1 */
-    --fs-h2: clamp(1.5rem, 1rem + 2vw, 2rem);             /* section */
+    --fs-display: clamp(1.875rem, 0.5rem + 6vw, 3.625rem); /* hero h1 */
+    --fs-h2: clamp(1.5rem, 1rem + 2vw, 2rem);              /* section */
     --fs-lede: clamp(1rem, 0.75rem + 1vw, 1.2rem);
     --fs-body: 1rem;
     --fs-small: 0.875rem;
@@ -190,8 +190,11 @@
   .hero-copy h1 {
     font-family: Georgia, "Times New Roman", serif;
     font-weight: 400; font-size: var(--fs-display);
-    line-height: 1.05; letter-spacing: -0.022em;
+    line-height: 1.08; letter-spacing: -0.022em;
     margin: 0 0 1rem;
+    overflow-wrap: break-word;
+    hyphens: auto;
+    text-wrap: balance;
   }
   .hero-copy h1 em { color: var(--accent); font-style: italic; }
   .hero-copy .lede {
@@ -249,6 +252,8 @@
     font-family: Georgia, serif; font-size: var(--fs-h2); font-weight: 400;
     letter-spacing: -0.018em; line-height: 1.18;
     margin: 0 0 0.75rem; max-width: 24ch;
+    overflow-wrap: break-word;
+    text-wrap: balance;
   }
   section h2 em { color: var(--accent); font-style: italic; }
   section .sub { font-size: var(--fs-lede); color: var(--muted); margin: 0 0 2rem; max-width: 52ch; }
