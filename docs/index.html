@@ -4,200 +4,457 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Nuance — Translate the way you'd actually say it.</title>
-<meta name="description" content="Nuance is a keyboard that translates the way you'd actually say it. Quick mode runs on-device. Smart mode adjusts for tone — friendly, professional, formal — across 30+ languages.">
+<meta name="description" content="A keyboard that translates with tone — friendly, professional, formal — across 30+ languages. No more flipping to Google Translate. Free on iPhone.">
+
+<!-- Social cards. These power LinkedIn / WhatsApp / iMessage / Twitter
+     previews when the URL is pasted into a chat or post. Without these
+     the link unfurls as a plain text URL — huge drop in click-through. -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://phillipan14.github.io/nuance-site/">
+<meta property="og:title" content="Nuance — Translate the way you'd actually say it.">
+<meta property="og:description" content="A keyboard that translates with tone — across 30+ languages, right inside any app. Free on iPhone.">
+<meta property="og:image" content="https://phillipan14.github.io/nuance-site/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="Nuance">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Nuance — Translate the way you'd actually say it.">
+<meta name="twitter:description" content="A keyboard that translates with tone — across 30+ languages, right inside any app. Free on iPhone.">
+<meta name="twitter:image" content="https://phillipan14.github.io/nuance-site/og-image.png">
+
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="apple-touch-icon" href="og-image.png">
+<meta name="theme-color" content="#edebe6">
+
 <style>
   :root {
     --bg: #edebe6;
     --ink: #2a1f14;
     --muted: #5a4a3a;
     --accent: #c75c4c;
+    --accent-soft: rgba(199, 92, 76, 0.08);
     --line: #e5dfd5;
     --card: #f5f3ee;
+    --good: #2d6a4f;
   }
   * { box-sizing: border-box; }
   html, body { margin: 0; padding: 0; }
   body {
     font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", system-ui, sans-serif;
     background: var(--bg);
+    background-image: radial-gradient(circle at 12% 8%, rgba(199, 92, 76, 0.06), transparent 50%),
+                      radial-gradient(circle at 92% 100%, rgba(199, 92, 76, 0.03), transparent 50%);
     color: var(--ink);
     line-height: 1.55;
     -webkit-font-smoothing: antialiased;
   }
-  .wrap { max-width: 760px; margin: 0 auto; padding: 64px 24px 96px; }
-  header { display: flex; align-items: center; gap: 12px; margin-bottom: 56px; }
-  header .logo {
-    width: 44px; height: 44px; border-radius: 11px;
+  .wrap { max-width: 880px; margin: 0 auto; padding: 56px 24px 72px; }
+
+  /* Top nav */
+  nav { display: flex; align-items: center; justify-content: space-between; margin-bottom: 52px; }
+  .brand { display: flex; align-items: center; gap: 12px; }
+  .brand .logo {
+    width: 40px; height: 40px; border-radius: 10px;
     background: linear-gradient(135deg, #c75c4c 0%, #d9826f 100%);
     display: flex; align-items: center; justify-content: center;
     color: white; font-style: italic; font-weight: 600;
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 24px;
+    font-family: Georgia, "Times New Roman", serif; font-size: 22px;
+    box-shadow: 0 6px 16px -8px rgba(199, 92, 76, 0.45);
   }
-  header .name { font-weight: 600; font-size: 18px; letter-spacing: -0.01em; }
+  .brand .name { font-weight: 600; font-size: 17px; letter-spacing: -0.01em; }
+  nav .top-cta {
+    display: inline-flex; align-items: center; gap: 8px;
+    color: var(--accent); font-weight: 600; font-size: 14px;
+    text-decoration: none; padding: 8px 14px; border-radius: 999px;
+    background: var(--accent-soft);
+  }
+
+  /* Hero: 2-column on desktop, stacked on mobile */
+  .hero { display: grid; grid-template-columns: 1.1fr 1fr; gap: 56px; align-items: center; }
   h1 {
     font-family: Georgia, "Times New Roman", serif;
-    font-weight: 400;
-    font-size: 44px;
-    line-height: 1.15;
-    letter-spacing: -0.015em;
-    margin: 0 0 20px;
+    font-weight: 400; font-size: 56px; line-height: 1.05;
+    letter-spacing: -0.022em; margin: 0 0 22px;
   }
   h1 em { color: var(--accent); font-style: italic; }
-  .lede { font-size: 19px; color: var(--muted); margin: 0 0 32px; }
-  section { margin-top: 56px; }
-  section h2 {
-    font-family: Georgia, serif;
-    font-size: 24px;
-    font-weight: 400;
-    letter-spacing: -0.01em;
-    margin: 0 0 16px;
-  }
-  ul { padding-left: 22px; margin: 0; }
-  li { margin-bottom: 8px; color: var(--ink); }
-  .grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 16px;
-    margin-top: 16px;
-  }
-  .card {
-    background: var(--card);
-    border: 1px solid var(--line);
-    border-radius: 12px;
-    padding: 20px;
-  }
-  .card h3 {
-    margin: 0 0 8px; font-size: 15px; font-weight: 600;
-  }
-  .card p { margin: 0; color: var(--muted); font-size: 14px; }
-  .demo {
-    margin-top: 40px;
-    display: flex; justify-content: center;
-  }
-  .demo video {
-    max-width: 320px;
-    width: 100%;
-    border-radius: 18px;
-    box-shadow: 0 20px 60px -20px rgba(199, 92, 76, 0.35),
-                0 8px 24px -8px rgba(42, 31, 20, 0.12);
-  }
-  .appstore {
-    margin-top: 40px;
-    display: flex; gap: 16px; align-items: center; flex-wrap: wrap;
-  }
-  .appstore a.badge {
+  .lede { font-size: 19px; color: var(--muted); margin: 0 0 28px; max-width: 36em; }
+
+  .cta-row { display: flex; gap: 14px; align-items: center; flex-wrap: wrap; }
+  .cta {
     display: inline-flex; align-items: center; gap: 10px;
     background: var(--ink); color: white; text-decoration: none;
-    padding: 12px 20px; border-radius: 12px;
+    padding: 13px 22px; border-radius: 12px;
     font-weight: 600; font-size: 15px;
-    transition: transform 0.15s ease;
+    box-shadow: 0 6px 18px -8px rgba(42, 31, 20, 0.45);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
   }
-  .appstore a.badge:hover { transform: translateY(-1px); }
-  .appstore a.badge svg { width: 22px; height: 22px; fill: white; }
-  .appstore .note { color: var(--muted); font-size: 13px; }
+  .cta:hover { transform: translateY(-1px); box-shadow: 0 10px 22px -8px rgba(42, 31, 20, 0.5); }
+  .cta svg { width: 22px; height: 22px; fill: white; }
+  .meta { color: var(--muted); font-size: 13px; }
+
+  /* Demo video */
+  .demo-wrap { position: relative; }
   .lang-toggle {
+    position: absolute; top: -38px; right: 0;
     display: inline-flex; gap: 4px;
     background: var(--card); border: 1px solid var(--line);
     border-radius: 999px; padding: 4px;
-    margin: 0 0 16px;
+    box-shadow: 0 4px 12px -6px rgba(42, 31, 20, 0.08);
   }
   .lang-toggle button {
     border: 0; background: transparent;
-    padding: 6px 14px; border-radius: 999px;
-    font: inherit; font-size: 13px; cursor: pointer;
-    color: var(--muted);
+    padding: 5px 13px; border-radius: 999px;
+    font: inherit; font-size: 12px; cursor: pointer; color: var(--muted);
   }
-  .lang-toggle button.active {
-    background: var(--accent); color: white;
+  .lang-toggle button.active { background: var(--accent); color: white; }
+  .demo video {
+    width: 100%; max-width: 360px; display: block; margin: 0 auto;
+    border-radius: 22px;
+    box-shadow: 0 30px 80px -30px rgba(199, 92, 76, 0.4),
+                0 12px 28px -10px rgba(42, 31, 20, 0.15);
   }
+
+  /* Sections */
+  section { margin-top: 96px; }
+  section .eyebrow {
+    font-size: 11px; font-weight: 700; letter-spacing: 0.14em;
+    text-transform: uppercase; color: var(--accent); margin-bottom: 14px;
+  }
+  section h2 {
+    font-family: Georgia, serif; font-size: 32px; font-weight: 400;
+    letter-spacing: -0.018em; line-height: 1.18;
+    margin: 0 0 16px; max-width: 22ch;
+  }
+  section h2 em { color: var(--accent); font-style: italic; }
+  section .sub { font-size: 17px; color: var(--muted); margin: 0 0 32px; max-width: 50ch; }
+
+  /* Before / after comparison */
+  .compare { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .compare .panel {
+    background: var(--card); border: 1px solid var(--line);
+    border-radius: 14px; padding: 20px;
+  }
+  .compare .panel.bad { background: #f0ece3; }
+  .compare .panel .label {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-size: 11px; font-weight: 700; letter-spacing: 0.1em;
+    text-transform: uppercase; color: var(--muted);
+    margin-bottom: 14px;
+  }
+  .compare .panel.good .label { color: var(--good); }
+  .compare .source {
+    font-size: 13px; color: var(--muted); margin-bottom: 8px;
+    font-style: italic;
+  }
+  .compare .result {
+    font-size: 21px; line-height: 1.35; color: var(--ink);
+    font-family: Georgia, "Times New Roman", serif;
+  }
+  .compare .result .accent { color: var(--accent); }
+  .compare .annotate { font-size: 12px; color: var(--muted); margin-top: 12px; }
+
+  /* How it works */
+  .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .step {
+    background: var(--card); border: 1px solid var(--line);
+    border-radius: 14px; padding: 20px;
+  }
+  .step .num {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 28px; height: 28px; border-radius: 8px;
+    background: var(--accent-soft); color: var(--accent);
+    font-family: Georgia, serif; font-weight: 600; font-size: 15px; font-style: italic;
+    margin-bottom: 12px;
+  }
+  .step h3 { margin: 0 0 6px; font-size: 15px; font-weight: 600; }
+  .step p { margin: 0; color: var(--muted); font-size: 14px; }
+
+  /* Two modes (kept from original — refined visually) */
+  .mode-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .mode {
+    background: var(--card); border: 1px solid var(--line);
+    border-radius: 14px; padding: 24px;
+  }
+  .mode h3 { margin: 0 0 10px; font-size: 16px; font-weight: 600; }
+  .mode p { margin: 0; color: var(--muted); font-size: 14px; line-height: 1.5; }
+  .mode .tag {
+    display: inline-block; font-size: 11px; font-weight: 600;
+    letter-spacing: 0.06em; text-transform: uppercase;
+    color: var(--accent); background: var(--accent-soft);
+    padding: 3px 8px; border-radius: 6px; margin-bottom: 12px;
+  }
+
+  /* Features list */
+  ul.feature-list { padding: 0; margin: 0; list-style: none; }
+  ul.feature-list li {
+    padding-left: 28px; position: relative; margin-bottom: 12px;
+    font-size: 15px; color: var(--ink);
+  }
+  ul.feature-list li::before {
+    content: ""; position: absolute; left: 0; top: 9px;
+    width: 18px; height: 2px; background: var(--accent); border-radius: 1px;
+  }
+
+  /* Founder block */
+  .founder {
+    background: var(--card); border: 1px solid var(--line);
+    border-radius: 14px; padding: 28px;
+    display: flex; gap: 20px; align-items: flex-start;
+  }
+  .founder .ñ {
+    flex-shrink: 0;
+    width: 44px; height: 44px; border-radius: 11px;
+    background: linear-gradient(135deg, #c75c4c 0%, #d9826f 100%);
+    display: flex; align-items: center; justify-content: center;
+    color: white; font-family: Georgia, serif; font-style: italic;
+    font-weight: 600; font-size: 22px;
+  }
+  .founder p { margin: 0 0 10px; font-size: 15px; color: var(--ink); line-height: 1.55; }
+  .founder .sig { color: var(--muted); font-size: 13px; }
+
+  /* FAQ */
+  details.faq {
+    border-bottom: 1px solid var(--line); padding: 14px 0;
+  }
+  details.faq:first-of-type { border-top: 1px solid var(--line); }
+  details.faq summary {
+    list-style: none; cursor: pointer;
+    font-size: 16px; font-weight: 600; color: var(--ink);
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  details.faq summary::-webkit-details-marker { display: none; }
+  details.faq summary::after {
+    content: "+"; color: var(--accent); font-weight: 400; font-size: 22px;
+    transition: transform 0.2s ease;
+  }
+  details.faq[open] summary::after { content: "−"; }
+  details.faq p { margin: 12px 0 0; color: var(--muted); font-size: 15px; line-height: 1.6; }
+
+  /* Final CTA */
+  .final-cta {
+    margin-top: 96px;
+    background: linear-gradient(135deg, rgba(199, 92, 76, 0.08), rgba(199, 92, 76, 0.02));
+    border: 1px solid var(--line);
+    border-radius: 18px; padding: 40px;
+    text-align: center;
+  }
+  .final-cta h2 {
+    font-family: Georgia, serif; font-size: 30px; font-weight: 400;
+    letter-spacing: -0.018em; margin: 0 0 16px;
+  }
+  .final-cta h2 em { color: var(--accent); font-style: italic; }
+  .final-cta p { color: var(--muted); margin: 0 0 24px; }
+  .final-cta .cta { margin: 0 auto; }
+
+  /* Footer */
   footer {
-    margin-top: 80px; padding-top: 32px;
+    margin-top: 64px; padding-top: 32px;
     border-top: 1px solid var(--line);
-    color: var(--muted); font-size: 14px;
-    display: flex; gap: 24px; flex-wrap: wrap;
+    color: var(--muted); font-size: 13px;
+    display: flex; gap: 22px; flex-wrap: wrap; align-items: center;
   }
   footer a { color: var(--muted); text-decoration: none; }
   footer a:hover { color: var(--accent); }
-  @media (max-width: 540px) {
-    h1 { font-size: 34px; }
-    .grid { grid-template-columns: 1fr; }
-    .wrap { padding: 40px 20px 64px; }
+  footer .copyright { margin-left: auto; }
+
+  /* Responsive */
+  @media (max-width: 760px) {
+    .hero { grid-template-columns: 1fr; gap: 40px; }
+    h1 { font-size: 38px; }
+    section h2 { font-size: 24px; }
+    .compare, .steps, .mode-grid { grid-template-columns: 1fr; }
+    .lang-toggle { position: static; margin-bottom: 16px; }
+    nav { margin-bottom: 36px; }
+    .wrap { padding: 36px 20px 56px; }
+    section { margin-top: 64px; }
+    footer .copyright { margin-left: 0; width: 100%; }
+    .final-cta { padding: 28px 20px; }
   }
 </style>
 </head>
 <body>
 <div class="wrap">
-  <header>
-    <div class="logo">ñ</div>
-    <div class="name">Nuance</div>
-  </header>
 
-  <h1>Translate <em>the way</em> you'd actually say it.</h1>
-  <p class="lede">A keyboard that translates with tone, not just words. Quick mode runs on your device. Smart mode adjusts for context — friendly, professional, formal — across 30+ languages.</p>
-
-  <div class="appstore">
-    <a class="badge" href="https://apps.apple.com/app/nuance-translate/id6766677268" target="_blank" rel="noopener">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83zM13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
-      Download on the App Store
+  <nav>
+    <a class="brand" href="/nuance-site/" style="text-decoration: none; color: inherit;">
+      <div class="logo">ñ</div>
+      <div class="name">Nuance</div>
     </a>
-    <span class="note">Free · iPhone · iOS 18+</span>
-  </div>
+    <a class="top-cta" href="https://apps.apple.com/app/nuance-translate/id6766677268" target="_blank" rel="noopener">
+      Get on App Store →
+    </a>
+  </nav>
 
-  <div class="lang-toggle" role="tablist" aria-label="Demo language">
-    <button type="button" class="active" data-lang="en">English</button>
-    <button type="button" data-lang="zh">中文</button>
-  </div>
-  <div class="demo">
-    <video id="demoVideo" src="demo.mp4" controls playsinline preload="metadata" poster=""></video>
+  <div class="hero">
+    <div>
+      <h1>Translate <em>the way</em> you'd actually say it.</h1>
+      <p class="lede">A keyboard with <strong>tone</strong>, not just words. Stop flipping between Google Translate and your messaging app — Nuance translates inside whatever app you're already in. 30+ languages.</p>
+      <div class="cta-row">
+        <a class="cta" href="https://apps.apple.com/app/nuance-translate/id6766677268" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83zM13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+          Download on the App Store
+        </a>
+        <span class="meta">Free · iPhone · iOS 18+</span>
+      </div>
+    </div>
+    <div class="demo-wrap">
+      <div class="lang-toggle" role="tablist" aria-label="Demo language">
+        <button type="button" class="active" data-lang="en">English</button>
+        <button type="button" data-lang="zh">中文</button>
+      </div>
+      <div class="demo">
+        <video id="demoVideo" src="demo.mp4" poster="demo-poster.jpg" controls playsinline preload="none"></video>
+      </div>
+    </div>
   </div>
 
   <section>
-    <h2>Two modes</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>Quick mode</h3>
-        <p>Instant on-device translation via Apple's framework. No internet needed.</p>
+    <div class="eyebrow">The difference</div>
+    <h2>Same input. <em>Native-speaker</em> output.</h2>
+    <p class="sub">Translation isn't just words — it's tone, register, and context. A literal translator gets the meaning. Nuance gets the message.</p>
+    <div class="compare">
+      <div class="panel bad">
+        <div class="label">⚠ Literal translation</div>
+        <div class="source">"Hi, how are you" (to your professor)</div>
+        <div class="result">你好吗？</div>
+        <div class="annotate">Uses casual <strong>你</strong>. Sounds like you're texting a classmate, not a faculty member.</div>
       </div>
-      <div class="card">
-        <h3>Smart mode</h3>
-        <p>Tone-aware AI translation. Pick a tone — Friendly, Professional, Direct, Warm — and Nuance rewrites the way a native speaker would.</p>
+      <div class="panel good">
+        <div class="label">✓ Nuance Smart mode</div>
+        <div class="source">"Hi, how are you" (to your professor)</div>
+        <div class="result">教授<span class="accent">您</span>好，最近一切顺利吗？</div>
+        <div class="annotate">Honorific <strong>您</strong>, addresses them by title, full polite construction — what a native speaker would actually write.</div>
       </div>
     </div>
   </section>
 
   <section>
-    <h2>Built for real conversations</h2>
-    <ul>
-      <li>Reply suggestions in their language and yours</li>
-      <li>Conversation memory: names, roles, the thread you're on</li>
-      <li>Voice-to-text dictation</li>
-      <li>Long-press any translation to hear it spoken aloud</li>
-      <li>30+ languages, no account, no sign-in, no email</li>
+    <div class="eyebrow">How it works</div>
+    <h2>Three taps. <em>Inside</em> any app.</h2>
+    <div class="steps">
+      <div class="step">
+        <div class="num">1</div>
+        <h3>Type in your language</h3>
+        <p>Open WhatsApp, iMessage, WeChat, anything. Type "Hi how are you" naturally.</p>
+      </div>
+      <div class="step">
+        <div class="num">2</div>
+        <h3>Switch to Nuance</h3>
+        <p>Long-press the globe key, pick Nuance. The translation strip appears at the top.</p>
+      </div>
+      <div class="step">
+        <div class="num">3</div>
+        <h3>Pick a tone, send</h3>
+        <p>Friend, professor, business. Nuance rewrites it the way a native would. Tap to insert.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="eyebrow">Two modes</div>
+    <h2>Private by default. <em>Smart</em> when you want it.</h2>
+    <div class="mode-grid">
+      <div class="mode">
+        <span class="tag">On-device</span>
+        <h3>Quick mode</h3>
+        <p>Apple's translation framework runs entirely on your phone. No internet, no server, nothing sent anywhere. Works offline once the language pack is downloaded.</p>
+      </div>
+      <div class="mode">
+        <span class="tag">Tone-aware</span>
+        <h3>Smart mode</h3>
+        <p>AI translation that adjusts for tone, register, and context. First 10 translations free. Bring your own DeepSeek key after, or share quick feedback to unlock more.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="eyebrow">Built for real conversations</div>
+    <h2>The little things that <em>actually</em> matter.</h2>
+    <ul class="feature-list">
+      <li><strong>Reply suggestions</strong> — three ways to respond, in their language and yours</li>
+      <li><strong>Conversation memory</strong> — Nuance remembers names, roles, and the thread you're on</li>
+      <li><strong>Voice-to-text dictation</strong> — speak instead of type, in either direction</li>
+      <li><strong>Pronunciation playback</strong> — long-press any translation to hear it spoken aloud</li>
+      <li><strong>Pinyin / romanization</strong> built in so you can actually say what you sent</li>
+      <li><strong>30+ languages</strong>, no account, no sign-in, no email required</li>
     </ul>
   </section>
+
+  <section>
+    <div class="founder">
+      <div class="ñ">ñ</div>
+      <div>
+        <p>I built Nuance at Tsinghua, where I send roughly 40 cross-language messages a day. I got tired of flipping to Google Translate, copying, pasting, and watching my professor read something that sounded like a robot wrote it.</p>
+        <p>Nuance is the keyboard I wanted to exist. If it helps you, I'd love to hear what you'd add — <a href="mailto:phillipan14@gmail.com" style="color: var(--accent); text-decoration: none;">phillipan14@gmail.com</a>.</p>
+        <div class="sig">— Phillip An, Schwarzman Scholar '26, Tsinghua University</div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="eyebrow">Questions</div>
+    <h2>The honest answers.</h2>
+    <details class="faq">
+      <summary>Is Nuance really free?</summary>
+      <p>Yes. Quick mode (on-device translation) is free forever. Smart mode (tone-aware AI) is free for the first 10 translations against our bundled key. After that, you can either share a one-minute feedback survey to unlock more, or add your own DeepSeek API key and pay your own bill directly (free trial credits available at deepseek.com).</p>
+    </details>
+    <details class="faq">
+      <summary>What data does Nuance collect?</summary>
+      <p>Nothing personal. Quick mode runs entirely on your phone — no network traffic at all. Smart mode sends the text you choose to translate over HTTPS to DeepSeek and discards it. No accounts, no sign-in, no email. See the <a href="/nuance-site/privacy/" style="color: var(--accent); text-decoration: none;">full privacy policy</a>.</p>
+    </details>
+    <details class="faq">
+      <summary>Which languages are supported?</summary>
+      <p>30+ language pairs via Apple Translation (Quick mode) — Spanish, French, German, Italian, Portuguese, Japanese, Korean, Chinese (Simplified + Traditional), Arabic, Russian, Dutch, Polish, Turkish, Vietnamese, Thai, Indonesian, and more. Smart mode works with any language pair the model knows.</p>
+    </details>
+    <details class="faq">
+      <summary>Does it work on Android?</summary>
+      <p>iPhone only for now, iOS 18+. Android isn't planned for the near term — building a native iOS keyboard with this UX took the whole runway. If demand is strong, that changes.</p>
+    </details>
+    <details class="faq">
+      <summary>What's "Allow Full Access" for, and is it safe?</summary>
+      <p>iOS requires "Allow Full Access" for any keyboard that makes network calls (Smart mode talks to DeepSeek). The toggle is in Settings → General → Keyboard → Keyboards → Nuance. We never log keystrokes — only the text you explicitly tap "Translate" on is sent. Quick mode works without Full Access since it's on-device.</p>
+    </details>
+    <details class="faq">
+      <summary>Who's behind Nuance?</summary>
+      <p>One person — Phillip An, a Schwarzman Scholar at Tsinghua University in Beijing. Built solo, designed for the people I send messages to every day in three languages. Support and feature requests: <a href="mailto:phillipan14@gmail.com" style="color: var(--accent); text-decoration: none;">phillipan14@gmail.com</a>.</p>
+    </details>
+  </section>
+
+  <div class="final-cta">
+    <h2>Translate the way you'd <em>actually</em> say it.</h2>
+    <p>Free, no signup, ready in 60 seconds.</p>
+    <a class="cta" href="https://apps.apple.com/app/nuance-translate/id6766677268" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83zM13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+      Download on the App Store
+    </a>
+  </div>
 
   <footer>
     <a href="/nuance-site/privacy/">Privacy</a>
     <a href="/nuance-site/support/">Support</a>
     <a href="https://apps.apple.com/app/nuance-translate/id6766677268" target="_blank" rel="noopener">App Store</a>
     <a href="mailto:phillipan14@gmail.com">phillipan14@gmail.com</a>
+    <div class="copyright">© 2026 Nuance · Made in Beijing</div>
   </footer>
 </div>
 
 <script>
-  // Language toggle: swaps the demo video source between EN and ZH.
+  // Language toggle: swaps the demo video source between EN and ZH. Pauses
+  // the current video, swaps src + poster, and restores playback if it was
+  // playing. Keeps current time across swaps when feasible.
   const video = document.getElementById('demoVideo');
   document.querySelectorAll('.lang-toggle button').forEach(btn => {
     btn.addEventListener('click', () => {
       document.querySelectorAll('.lang-toggle button').forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
       const lang = btn.dataset.lang;
-      const wasPaused = video.paused;
+      const wasPlaying = !video.paused;
       const t = video.currentTime;
+      video.poster = lang === 'zh' ? 'demo-poster-zh.jpg' : 'demo-poster.jpg';
       video.src = lang === 'zh' ? 'demo-zh.mp4' : 'demo.mp4';
       video.addEventListener('loadedmetadata', () => {
         try { video.currentTime = t; } catch (_) {}
-        if (!wasPaused) video.play().catch(() => {});
+        if (wasPlaying) video.play().catch(() => {});
       }, { once: true });
     });
   });
